@@ -10,27 +10,28 @@ Powered by **Gemini 3 Flash Preview** via the Google AI Studio API.
 
 When you type a casual prompt like:
 
-> A modern, brutalist, football club website for Alcester Town Football Club, using their club colours but imposing a sense of excitement, thrill, success and teamwork. Bright contrasting colours.
+> A clean dashboard for a SaaS analytics tool. Dark mode, modern feel. Show charts, user stats, and recent activity.
 
 The extension rewrites it into a structured prompt following all official Stitch best practices:
 
-> A bold, brutalist football club website for Alcester Town FC. Raw, high-contrast design with heavy typography and stark geometric shapes conveying excitement, intensity and squad unity.
+> A sophisticated SaaS analytics dashboard with a dark, data-dense layout. Clean, minimal design with strong visual hierarchy and purposeful use of colour to surface key metrics.
 >
 > DESIGN SYSTEM:
 > - Platform: Web, Desktop-first
-> - Theme: Light with high-contrast accents, brutalist, raw, confrontational
-> - Background: Clean White (#ffffff)
-> - Primary Accent: Alcester Gold (#FFD700) for call-to-action buttons and highlights
-> - Secondary Accent: Alcester Red (#C8102E) for headers and accent bars
-> - Text Primary: Near Black (#111827) for body text
-> - Text Secondary: Dark Grey (#374151) for captions
-> - Typography: Heavy, condensed sans-serif headings; clean body font
-> - Buttons: Sharp corners (0px radius), bold uppercase labels
-> - Cards: No border-radius, strong borders, high-contrast shadows
+> - Theme: Dark, professional, data-focused
+> - Background: Deep Navy (#0f172a)
+> - Primary Accent: Electric Blue (#3b82f6) for interactive elements and highlights
+> - Surface: Slate (#1e293b) for cards and panels
+> - Text Primary: White (#f8fafc)
+> - Text Secondary: Muted Grey (#94a3b8) for labels and captions
+> - Typography: Clean sans-serif, medium weight headings, tabular figures for numbers
+> - Buttons: Rounded corners (6px), solid primary and ghost variants
 >
 > PAGE STRUCTURE:
-> 1. Navigation bar: Club crest on left, bold uppercase menu items (Home, Fixtures, Squad, News, Contact), sharp-edged active states in gold
-> 2. Hero section: Full-width action photography of match day, large condensed headline overlaid ("This is Alcester Town"), primary CTA button "View Fixtures"
+> 1. Top navigation bar: Logo left, global search centre, user avatar and notifications right
+> 2. KPI row: Four stat cards showing key metrics with trend indicators (up/down arrows, percentage change)
+> 3. Main chart area: Large line chart for traffic over time, toggle for daily/weekly/monthly
+> 4. Secondary row: Donut chart for traffic sources left, recent activity feed right
 > ...
 
 This structured format dramatically improves Stitch's output quality.
