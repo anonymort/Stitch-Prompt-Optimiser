@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 340px;
+      font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 16px;
+    }
+    label {
+      font-size: 12px;
+      font-weight: 500;
+      color: #aaa;
+      display: block;
+      margin-bottom: 6px;
+    }
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background: #0f0f23;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    input:focus {
+      border-color: #4285f4;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 12px;
+      transition: all 0.15s;
+    }
+    .btn-primary {
+      background: #4285f4;
+      color: #fff;
+    }
+    .btn-primary:hover { background: #3367d6; }
+    .btn-danger {
+      background: transparent;
+      color: #f44;
+      border: 1px solid #f44;
+      margin-top: 8px;
+    }
+    .btn-danger:hover { background: rgba(255,68,68,0.1); }
+    .status {
+      font-size: 11px;
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 6px;
+      display: none;
+    }
+    .status.success { display: block; background: rgba(52,199,89,0.15); color: #34c759; }
+    .status.error { display: block; background: rgba(255,68,68,0.15); color: #f44; }
+    .status.info { display: block; background: rgba(66,133,244,0.15); color: #4285f4; }
+    .key-display {
+      display: none;
+      margin-top: 12px;
+      padding: 10px;
+      background: #0f0f23;
+      border: 1px solid #333;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #888;
+    }
+    .key-display .masked {
+      font-family: monospace;
+      color: #ccc;
+    }
+    .toggle-vis {
+      background: none;
+      border: none;
+      color: #4285f4;
+      cursor: pointer;
+      font-size: 11px;
+      margin-left: 8px;
+    }
+    a {
+      color: #4285f4;
+      text-decoration: none;
+      font-size: 11px;
+    }
+    a:hover { text-decoration: underline; }
+    .help {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #222;
+      font-size: 11px;
+      color: #666;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stitch Prompt Optimiser</h1>
+  <p class="subtitle">Powered by Gemini 3 Flash Preview</p>
+
+  <div id="setup-view">
+    <label for="api-key">Google AI Studio API Key</label>
+    <input type="password" id="api-key" placeholder="Enter your Gemini API key">
+    <button class="btn btn-primary" id="save-btn">Save Key</button>
+    <div class="status" id="save-status"></div>
+  </div>
+
+  <div id="saved-view" style="display:none">
+    <div class="key-display" id="key-display">
+      <span>Key: </span><span class="masked" id="masked-key"></span>
+      <button class="toggle-vis" id="toggle-key">Show</button>
+    </div>
+    <button class="btn btn-primary" id="update-btn">Update Key</button>
+    <button class="btn btn-danger" id="remove-btn">Remove Key</button>
+    <div class="status" id="action-status"></div>
+  </div>
+
+  <div class="help">
+    Get your API key from <a href="https://aistudio.google.com/apikey" target="_blank">Google AI Studio</a>.<br>
+    Your key is stored locally in your browser and never shared.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

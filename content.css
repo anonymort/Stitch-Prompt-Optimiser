@@ -1,0 +1,114 @@
+/* Stitch Prompt Optimiser - injected button styles */
+
+.spo-optimise-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Default idle state */
+.spo-optimise-btn--idle {
+  background: linear-gradient(135deg, #4285f4 0%, #6c47ff 100%);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(66, 133, 244, 0.3);
+}
+.spo-optimise-btn--idle:hover {
+  background: linear-gradient(135deg, #3b78e7 0%, #5a3ae0 100%);
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.4);
+  transform: scale(1.02);
+}
+.spo-optimise-btn--idle:active {
+  transform: scale(0.98);
+}
+
+/* Loading state */
+.spo-optimise-btn--loading {
+  background: linear-gradient(135deg, #4285f4 0%, #6c47ff 100%);
+  color: #fff;
+  opacity: 0.85;
+  cursor: wait;
+  pointer-events: none;
+}
+
+/* Success state */
+.spo-optimise-btn--success {
+  background: #1e8e3e;
+  color: #fff;
+}
+
+/* Error state */
+.spo-optimise-btn--error {
+  background: #d93025;
+  color: #fff;
+}
+
+/* No-key state */
+.spo-optimise-btn--nokey {
+  background: #5f6368;
+  color: #dadce0;
+}
+
+/* Spinner animation */
+.spo-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spo-spin 0.6s linear infinite;
+}
+@keyframes spo-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Sparkle icon */
+.spo-sparkle {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Toast notification */
+.spo-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #1a1a2e;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-family: 'Google Sans', 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  z-index: 99999;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  max-width: 400px;
+  text-align: center;
+}
+.spo-toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+.spo-toast--error {
+  border-left: 3px solid #d93025;
+}
+.spo-toast--success {
+  border-left: 3px solid #1e8e3e;
+}
