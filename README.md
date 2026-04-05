@@ -6,6 +6,19 @@ Powered by **Gemini 3 Flash Preview** via the Google AI Studio API.
 
 ![Stitch Prompt Optimiser in action](assets/screenshot.png)
 
+## Why use this
+
+Stitch's output quality is highly sensitive to how prompts are written. The better you articulate your intention — with specific component names, hex colours, layout structure, and visual tone — the more accurate and complete the generated design.
+
+A few things the community has discovered through heavy use:
+
+- **Prompts over ~5,000 characters cause Stitch to omit components.** You need to be precise *and* concise.
+- **Stitch doesn't remember previous context** unless you're extremely explicit and incremental. Every prompt should be self-contained.
+- **Vague adjectives produce generic output.** "Modern" means nothing; "clean, minimal, with generous whitespace and a tight 8px grid" does.
+- **Google's own enhance-prompt skill** (from the official [stitch-skills repo](https://github.com/google-labs-code/stitch-skills), 5,000+ weekly installs) codifies a specific structure — Design System block + numbered Page Structure — that reliably produces better results.
+
+This extension applies all of that automatically, so you can write naturally and get a production-quality prompt without thinking about format.
+
 ## What it does
 
 When you type a casual prompt like:
